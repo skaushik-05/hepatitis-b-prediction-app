@@ -161,7 +161,7 @@ def main():
     elif choice == "Login":
         username = st.sidebar.text_input("Username")
         password = st.sidebar.text_input("Password", type='password')
-        if st.sidebar.checkbox("Login"):
+        if st.sidebar.button("Login"):
             create_usertable()
             hashed_pswd = generate_hashes(password)
             result = login_user(username, verify_hashes(password, hashed_pswd))
